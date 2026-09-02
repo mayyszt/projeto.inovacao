@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #754c35;
+    color: white;
+}
+
+header {
+    background-color: #f5ead8;
+
+    min-height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 7%;
+}
+
+.logo {
+    width: 130px;
+    height: 60px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a {
+    color: #3b271b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-btn {
+    color: #3b271b;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.usuario img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+
+#menu {
+    display: none;
+}
+
+.categorias {
+    position: fixed;
+
+    top: 0;
+    left: -280px;
+
+    width: 260px;
+    height: 100%;
+
+    background-color: #f5ead8;
+
+    color: #3b271b;
+
+    padding: 30px;
+
+    z-index: 10;
+
+    transition: 0.3s;
+}
+
+#menu:checked ~ .categorias {
+    left: 0;
+}
+
+.categorias a {
+    display: block;
+
+    color: #3b271b;
+
+    text-decoration: none;
+
+    padding: 12px 5px;
+}
+
+.categorias a:hover {
+    background-color: #e4d2b9;
+}
+
+.fechar {
+    float: right;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* CONTEÚDO */
+
+main {
+    padding: 50px 8%;
+}
+
+main > h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.produtos {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+
+    width: 220px;
+
+    background-color: #f5ead8;
+
+    color: #3b271b;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+}
+
+.card h2 {
+    font-size: 18px;
+
+    padding: 12px 12px 5px;
+}
+
+.card p {
+    padding: 0 12px 18px;
+
+    font-weight: bold;
+}
+
+.card > span {
+    position: absolute;
+
+    top: 10px;
+    left: 10px;
+
+    background-color: #3f281c;
+
+    color: white;
+
+    padding: 6px;
+
+    border-radius: 5px;
+
+    font-size: 11px;
+}
+
+.promocao > span {
+    background-color: #a52b24;
+}
+
+.card s {
+    color: #777;
+
+    margin-right: 5px;
+}
+
+.categoria {
+    padding-top: 100px;
+    margin-bottom: 50px;
+}
+
+.categoria h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+footer {
+    background-color: #392419;
+
+    padding: 25px 8%;
+}
+
+footer p {
+    margin: 7px 0;
+}
+
+@media (max-width: 800px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
